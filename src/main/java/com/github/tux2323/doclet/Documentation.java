@@ -5,19 +5,19 @@ import java.util.List;
 
 public class Documentation {
 
-    private final List<TestClassDoc> testClassDocs = new LinkedList<TestClassDoc>();
+    private final List<ClassDoc> classDocs = new LinkedList<ClassDoc>();
 
-    public void addTestClassDoc(TestClassDoc testClassDoc) {
-        getTestClassDocs().add(testClassDoc);
+    public void addTestClassDoc(ClassDoc classDoc) {
+        getClassDocs().add(classDoc);
     }
 
-    public List<TestClassDoc> getTestClassDocs() {
-        return testClassDocs;
+    public List<ClassDoc> getClassDocs() {
+        return classDocs;
     }
 
     @Override
     public String toString() {
-        return "Documentation [testClassDocs=" + testClassDocs + "]";
+        return "Documentation [classDocs=" + classDocs + "]";
     }
 
     @Override
@@ -25,7 +25,7 @@ public class Documentation {
         final int prime = 31;
         int result = 1;
         result = prime * result
-                + ((testClassDocs == null) ? 0 : testClassDocs.hashCode());
+                + ((classDocs == null) ? 0 : classDocs.hashCode());
         return result;
     }
 
@@ -38,10 +38,10 @@ public class Documentation {
         if (getClass() != obj.getClass())
             return false;
         Documentation other = (Documentation) obj;
-        if (testClassDocs == null) {
-            if (other.testClassDocs != null)
+        if (classDocs == null) {
+            if (other.classDocs != null)
                 return false;
-        } else if (!testClassDocs.equals(other.testClassDocs))
+        } else if (!classDocs.equals(other.classDocs))
             return false;
         return true;
     }
